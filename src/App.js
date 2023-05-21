@@ -1,10 +1,8 @@
+import React from 'react';
+import ExerciseComponent from './ExerciseComponent'
+
 function App() {
-  return (
-    <div>
-      <h2>Let's gO react js!</h2>
-      <p>Test</p>
-    </div>
-  );
+  return <ExerciseComponent />;
 }
 
 export default App;
