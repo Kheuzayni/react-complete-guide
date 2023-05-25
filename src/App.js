@@ -4,27 +4,23 @@ import ExerciseComponent from './ExerciseComponent';
 
 function App() {
   //state (état, données)
-  const [compteur, setCompteur] = useState(1);
-  //comportements
-  const handleClick1 = () => {
-    alert("hangleclick done : 1ere methode branchement composant et affichage");
-  };
-  const handleClick = () => {
-    //compteur = compteur+1
-    setCompteur(compteur+1);
-  };
+  const [fruits, setFruits] = useState([
+    { id: 1, nom : "gérté"},
+    { id: 2, nom : "Thiaff"},
+    { id: 3, nom : "aréne"},
+  ]);
 
+  //comportements
   //affichage (render)
   return (
-  <div>
-    <ExerciseComponent/>
-    <h1>{compteur}</h1>
-    <button onClick={handleClick1}>methode1</button> 
-    <button onClick={() => alert("hangleclick done : 2eme methode branchement composant et affichage")}>
-      methode2
-    </button><br/>
-    <button onClick={handleClick}>Incrémente</button>
-  </div>
+    <div>
+      <h1>Liste des fruits</h1>
+      <ul>
+        {fruits.map((fruit) =>{
+          return <li>{fruit.nom}</li>;
+        })}
+      </ul>
+    </div>
   );
   
 }
