@@ -6,10 +6,18 @@ function App() {
   //state (état, données)
   const [compteur, setCompteur] = useState(1);
   //comportements
+  const handleClick = () => {
+    alert("hangleclick done");
+  };
 
   //affichage (render)
   
-  return <h1>{compteur}</h1>;
+  return (
+  <div>
+    <h1>{compteur}</h1>
+    <button onClick={handleClick}>Alert</button>
+  </div>
+  );
   
 }
 
