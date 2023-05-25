@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import ExerciseComponent from './ExerciseComponent';
-
 
 function App() {
   //state (état, données)
@@ -11,6 +9,10 @@ function App() {
   ]);
 
   //comportements
+  const deleteFruit = (id) => {
+    //alert("Test branchement delete")
+    console.log(id);
+  }
   //affichage (render)
   return (
     <div>
@@ -18,7 +20,9 @@ function App() {
       <ul>
         {fruits.map(
             (fruit) => (
-              <li>{fruit.nom}</li>
+              <li key={fruit.id}>
+                {fruit.nom} <button onClick={() => deleteFruit(fruit.id)} >Delete</button>
+              </li>
             )
           )
         }
