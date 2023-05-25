@@ -36,8 +36,8 @@ function App() {
     setNewFruit("");
 
   }
-  const handleChange = (e) => {
-    setNewFruit(e.targert.value);
+  const handleChange = (event) => {
+    setNewFruit(event.targert.value);
   }
   //affichage (render) 
   return (
