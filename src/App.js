@@ -16,9 +16,12 @@ function App() {
     <div>
       <h1>Liste des fruits</h1>
       <ul>
-        {fruits.map((fruit) =>{
-          return <li>{fruit.nom}</li>;
-        })}
+        {fruits.map(
+            (fruit) => (
+              <li>{fruit.nom}</li>
+            )
+          )
+        }
       </ul>
     </div>
   );
