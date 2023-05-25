@@ -7,7 +7,7 @@ function App() {
     { id: 2, nom : "Thiaff"},
     { id: 3, nom : "aréne"},
   ]);
-  const [newFruit, setNewFruit] = useState("test");
+  const [newFruit, setNewFruit] = useState("");
 
   //comportements
   const deleteFruit = (id) => {
@@ -36,9 +36,8 @@ function App() {
     setNewFruit("");
 
   }
-  const handleChange = (event) => {
-    console.log(event.targert.value);
-    setNewFruit(event.targert.value);
+  const handleChange = (e) => {
+    setNewFruit(e.targert.value);
   }
   //affichage (render) 
   return (
@@ -48,15 +47,15 @@ function App() {
         {fruits.map(
             (fruit) => (
               <li key={fruit.id}>
-                {fruit.nom} <button onClick={() => deleteFruit(fruit.id)} >Delete</button>
+                {fruit.nom} {""}
+                <button onClick={() => deleteFruit(fruit.id)} >Delete</button>
               </li>
             )
           )
         }
       </ul>
       <form action="submit" onSubmit={handleSubmit}>
-        <input type="text" placeholder='ajouter un fruit...' onChange={handleChange}
-        />
+        <input type="text" placeholder="ajouter un fruit..." onChange={handleChange} value={newFruit} />
         <button >+ Add fruit</button>
       </form>
     </div>
