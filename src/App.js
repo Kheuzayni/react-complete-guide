@@ -3,8 +3,7 @@ import ExerciseComponent from './ExerciseComponent';
 
 
 function App() {
-  //return <ExerciseComponent />;
-  return <Horloge />;
+  return <ExerciseComponent />;
 }
 
 export default App;
