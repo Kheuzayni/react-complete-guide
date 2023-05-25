@@ -12,6 +12,13 @@ function App() {
   const deleteFruit = (id) => {
     //alert("Test branchement delete")
     console.log(id);
+    //Process
+    //1. copie du state
+    const fruitsCopy = [...fruits];
+    //2. manipuler ma copie
+    const fruitsCopyUpdated = fruitsCopy.filter((fruit) => fruit.id !== id);
+    //3. Update mon state avec le setter
+    setFruits(fruitsCopyUpdated) ;
   }
   //affichage (render)
   return (
